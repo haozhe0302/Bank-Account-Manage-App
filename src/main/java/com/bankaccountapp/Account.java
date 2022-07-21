@@ -10,12 +10,13 @@ public abstract class Account implements IBaseRate{
     double rate;
 
     static int index = 10000;
+    static double bonus = 100; // $ 100 bonus for every new customer
 
     // Constructor to set base properties and initialize the account
     public Account(String name, String sIN, double initDeposit){
         this.name = name;
         this.sIN = sIN;
-        balance = initDeposit;
+        balance = initDeposit + bonus;
         // System.out.println("NAME: " + name + " SIN: " + sIN + " BALANCE: $" + balance);
 
         index ++;
